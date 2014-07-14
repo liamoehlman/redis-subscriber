@@ -1,0 +1,23 @@
+{
+  "name": "redis-sub",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "grape": "^1.0.0",
+    "mockery": "^1.4.1",
+    "redis": "^0.10.3"
+  },
+  "devDependencies": {
+    "jshint": "^2.5.2",
+    "precommit-hook": "^1.0.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.yoik.net/"
+  }
+}
