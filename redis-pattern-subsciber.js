@@ -36,6 +36,7 @@ module.exports = function(logger) {
                 return callback(error);
             }
 
+            //TO DO: investigate doing this only once
             client.on('pmessage', callbackInstance);
         });
 
