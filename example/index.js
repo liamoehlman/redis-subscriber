@@ -1,6 +1,8 @@
-var subscribe = require('./')();
+var host = '127.0.0.1',
+    port = '6379',
+    subscribe = require('../')(port, host);
 
-/*==========  global variable  ==========*/
+// VARIABLE
 
 var subscription = subscribe('thing', function(error){
     if(error) {
@@ -11,12 +13,12 @@ var subscription = subscribe('thing', function(error){
 subscription.on('message', function(message, channel) {
     console.log('MESSAGE: '+ message + ' CHANNEL X: ' + channel);
 
-    // if(message === 'destroy'){
-    //     this.unsubscribe();
-    // }
+    if(message === 'destroy the thing'){
+        this.unsubscribe();
+    }
 });
 
-/*==========  Chaining  ==========*/
+// CHAINING
 
 subscribe('thing*', function(error){
     if(error) {
@@ -31,7 +33,7 @@ subscribe('thing*', function(error){
     }
 });
 
-/*==========  Function Scope  ==========*/
+// FUNCTION SCOPE
 
 subscribe('thingy', function(error, emitter){
     if(error) {
