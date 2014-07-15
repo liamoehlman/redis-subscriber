@@ -1,10 +1,6 @@
-# redis-subscriber
-
-## Example
-
 var host = '127.0.0.1',
     port = '6379',
-    subscribe = require('redis-subscriber')(port, host);
+    subscribe = require('../')(port, host);
 
 subscribe('thing*', function(error, emitter){
     var count = 0;
