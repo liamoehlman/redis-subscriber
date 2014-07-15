@@ -1,5 +1,5 @@
 var redis = require('redis'),
-    createSubscriber = require('../redis-pattern-subscriber');
+    createSubscriber = require('redis-pattern-subscriber');
 
 function init(port, host, logger) {
     var client = redis.createClient(port, host);

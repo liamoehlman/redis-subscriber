@@ -11,7 +11,8 @@
   "dependencies": {
     "grape": "^1.0.0",
     "mockery": "^1.4.1",
-    "redis": "^0.10.3"
+    "redis": "^0.10.3",
+    "redis-pattern-subscriber": "^1.0.1"
   },
   "devDependencies": {
     "jshint": "^2.5.2",
