@@ -1,14 +1,12 @@
 {
   "name": "redis-subscriber",
   "version": "1.0.1",
-  "description": "",
+  "description": "## Example",
   "main": "index.js",
   "scripts": {
     "test": "node test",
     "prepush": "jshint . && npm test"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "grape": "^1.0.0",
     "mockery": "^1.4.1",
@@ -21,5 +19,17 @@
   },
   "publishConfig": {
     "registry": "https://npm.yoik.net/"
-  }
+  },
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yoik/redis-subscriber.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yoik/redis-subscriber/issues"
+  },
+  "homepage": "https://github.com/yoik/redis-subscriber"
 }
