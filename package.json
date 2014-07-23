@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node test"
+    "test": "node test",
+    "prepush": "jshint . && npm test"
   },
   "author": "",
   "license": "ISC",
@@ -15,8 +16,8 @@
     "redis-pattern-subscriber": "^1.0.1"
   },
   "devDependencies": {
-    "jshint": "^2.5.2",
-    "precommit-hook": "^1.0.2"
+    "husky": "^0.6.0",
+    "jshint": "^2.5.2"
   },
   "publishConfig": {
     "registry": "https://npm.yoik.net/"
