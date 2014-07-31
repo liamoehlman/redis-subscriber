@@ -1,6 +1,6 @@
 var redis = require('redis'),
     createSubscriber = require('redis-pattern-subscriber'),
-    actualSubscriber = createSubscriber(),
+    actualSubscriber,
     client;
 
 function subscriber(pattern, subscribeCallback){
@@ -16,15 +16,19 @@ function init(port, host, logger) {
         throw 'Already initialised';
     }
 
+    actualSubscriber = createSubscriber(logger);
+
     client = redis.createClient(port, host);
 
     client.on('error', function(error) {
-        logger.error(error);
+        if(error){
+            return logger.error(error);
+        }
     });
 
     process.on('exit', function() {
         if (client) {
-            client.end();
+            client.quit();
         }
     });
 }
