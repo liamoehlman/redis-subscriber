@@ -17,9 +17,6 @@
     "husky": "^0.6.0",
     "jshint": "^2.5.2"
   },
-  "publishConfig": {
-    "registry": "https://npm.yoik.net/"
-  },
   "directories": {
     "example": "example",
     "test": "test"
